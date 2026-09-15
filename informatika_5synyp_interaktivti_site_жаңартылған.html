@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ИнфоQuest | 5-сынып информатикасы</title>
+<style>
+:root{--bg:#f5f7ff;--card:#fff;--text:#18213b;--muted:#6c7590;--primary:#635bdf;--primary2:#8a6df2;--accent:#15b89f;--gold:#ffbd45;--danger:#ef5b73;--line:#e8eaf3;--dark:#171a3a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:radial-gradient(circle at 85% 8%,#eeeaff 0,transparent 28%),var(--bg);color:var(--text)}button,input{font:inherit}button{cursor:pointer;border:0}.app{display:flex;min-height:100vh}.side{width:255px;background:linear-gradient(180deg,#171a3a,#25275a);color:white;padding:22px 16px;position:fixed;inset:0 auto 0 0;z-index:2}.logo{font-size:23px;font-weight:900;margin:0 10px 8px}.logo span{color:#7ce7d8}.tagline{font-size:12px;color:#aeb3e2;margin:0 10px 27px}.nav button{width:100%;padding:13px 14px;margin:4px 0;background:transparent;color:#dfe2ff;text-align:left;border-radius:13px;transition:.2s}.nav button.active,.nav button:hover{background:#353970;color:#fff;transform:translateX(3px)}.side-foot{position:absolute;bottom:22px;left:25px;right:25px;color:#aeb3e2;font-size:12px}.main{margin-left:255px;width:calc(100% - 255px);padding:25px;max-width:1500px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;gap:12px}.badge{background:#e4faf6;color:#087d70;padding:8px 12px;border-radius:999px;font-weight:800;font-size:13px}.top-right{display:flex;align-items:center;gap:10px}.coins{background:#fff5dc;color:#96620b;padding:9px 13px;border-radius:999px;font-weight:800}.search{padding:10px 14px;border:1px solid var(--line);border-radius:12px;width:245px;background:#fff}.hero{background:linear-gradient(135deg,#5b54d9,#8b6df3);color:white;border-radius:26px;padding:30px;display:flex;justify-content:space-between;gap:20px;overflow:hidden;box-shadow:0 14px 30px #605be633}.hero h1{font-size:38px;line-height:1.08;margin:9px 0}.hero p{max-width:680px;color:#f0efff;line-height:1.6}.hero .emoji{font-size:105px;align-self:center;filter:drop-shadow(0 10px 8px #221d6870)}.primary{background:var(--primary);color:#fff;padding:11px 17px;border-radius:11px;font-weight:800}.hero .primary{background:#fff;color:#554bd1}.secondary{background:#eef0ff;color:#4c4ed0;padding:10px 14px;border-radius:10px;font-weight:700}.gold{background:#fff2cf;color:#99610b;padding:10px 14px;border-radius:10px;font-weight:700}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:20px 0}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;box-shadow:0 6px 22px #20244d0b}.stat b{font-size:28px;display:block;margin:7px 0}.muted{color:var(--muted)}.progress{height:10px;background:#eceef6;border-radius:99px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#64dec4);border-radius:99px;transition:.5s}.section{display:none}.section.active{display:block}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.lesson{min-height:190px}.icon{font-size:35px}.section h1{margin-bottom:4px}.mission{display:flex;align-items:center;justify-content:space-between;gap:15px}.mission .flag{font-size:40px}.small{font-size:13px}.pill{display:inline-block;padding:5px 9px;background:#f0efff;color:#564bce;border-radius:99px;font-size:12px;font-weight:800}.topic{cursor:pointer;transition:.2s}.topic:hover{transform:translateY(-4px);box-shadow:0 12px 25px #5b54d925}.quiz{max-width:850px}.quiz-top{display:flex;justify-content:space-between;color:var(--muted);font-weight:700}.option{display:block;width:100%;text-align:left;padding:14px;margin:9px 0;border:1px solid var(--line);background:#fff;border-radius:12px;transition:.15s}.option:hover:not(:disabled){border-color:var(--primary);background:#f6f6ff;transform:translateX(3px)}.correct{background:#e6faf5!important;border-color:#13b8a6!important}.wrong{background:#fff0f2!important;border-color:#ef5b73!important}.result{font-size:19px;font-weight:800;padding:15px;border-radius:12px;margin-top:15px}.tip{background:#fff7df;border-left:4px solid #f2b84b;padding:14px;border-radius:10px}.gamebox{margin-top:18px}.game-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:15px}.game-item{padding:17px 8px;border-radius:13px;background:#f1f2ff;color:#4c4ed0;font-weight:800}.game-item.selected{background:#dffaf4;color:#087d70}.game-item.bad{background:#fff0f2;color:#c83b56}.streak{color:#ed7a24;font-weight:900}.badge-card{display:flex;gap:13px;align-items:center}.badge-icon{font-size:34px}.locked{filter:grayscale(1);opacity:.45}.table{width:100%;border-collapse:collapse}.table td,.table th{padding:13px;border-bottom:1px solid var(--line);text-align:left}.footer{text-align:center;color:var(--muted);padding:30px}.toast{position:fixed;right:25px;bottom:25px;background:#18213b;color:#fff;padding:14px 18px;border-radius:13px;box-shadow:0 8px 25px #0003;z-index:5;animation:pop .3s}@keyframes pop{from{transform:translateY(15px);opacity:0}to{transform:none;opacity:1}}
+@media(max-width:950px){.side{width:78px;padding:18px 8px}.logo{font-size:0;text-align:center;margin:0 0 26px}.logo span{font-size:25px}.tagline,.side-foot{display:none}.nav button{font-size:0;text-align:center}.nav button:first-letter{font-size:21px}.main{margin-left:78px;width:calc(100% - 78px);padding:18px}.grid,.cards{grid-template-columns:1fr 1fr}.hero .emoji{display:none}}
+@media(max-width:620px){.grid,.cards{grid-template-columns:1fr}.top .search{display:none}.hero h1{font-size:29px}.top{align-items:flex-start}.game-grid{grid-template-columns:1fr 1fr}.mission{align-items:flex-start;flex-direction:column}}
+
+.name-modal{position:fixed;inset:0;background:linear-gradient(135deg,#171a3add,#635bdfdd);display:flex;align-items:center;justify-content:center;z-index:20;padding:20px}.name-modal.hidden{display:none}.name-card{background:#fff;border-radius:25px;padding:32px;max-width:520px;width:100%;text-align:center;box-shadow:0 20px 70px #11183c66}.name-card .big{font-size:65px}.name-card h1{margin:8px 0;color:#272958}.name-card p{color:#6c7590;line-height:1.5}.name-input{width:100%;padding:14px 16px;border:2px solid #e8eaf3;border-radius:12px;outline:none;margin:10px 0 14px}.name-input:focus{border-color:#635bdf}.name-error{color:#ef5b73;font-size:13px;min-height:18px}.player{background:#f0efff;color:#5047c6;padding:9px 12px;border-radius:999px;font-weight:800;white-space:nowrap}.leaderboard{max-width:950px}.rank{font-weight:900;font-size:20px}.me-row{background:#f0efff}.change-name{background:transparent;color:#635bdf;text-decoration:underline;font-size:12px;margin-left:6px}
+
+.challenge-options{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:15px}
+.timer{font-size:34px;font-weight:900;text-align:center;margin:10px}
+.score-pop{font-size:20px;font-weight:900;text-align:center}
+.scramble{font-size:30px;letter-spacing:6px;font-weight:900;text-align:center;padding:15px}
+.choice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media(max-width:620px){.challenge-options,.choice-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body><div class="name-modal" id="nameModal"><div class="name-card"><div class="big">🏁</div><h1>ИнфоQuest жарысы</h1><p>Жарысқа қатысу үшін алдымен аты-жөніңді жаз. Нәтижең көшбасшылар кестесіне қосылады!</p><input class="name-input" id="nameInput" maxlength="60" placeholder="Мысалы: Айдана Нұрланқызы" autocomplete="name"><div class="name-error" id="nameError"></div><button class="primary" onclick="startCompetition()">Жарысты бастау 🚀</button></div></div>
+<div class="app"><aside class="side"><div class="logo">💻 Инфо<span>Quest</span></div><p class="tagline">Оқы. Ойна. Жеңіске жет!</p><div class="nav">
+<button class="active" data-page="home">🏠 Басты бет</button><button data-page="theory">📚 Теория әлемі</button><button data-page="practice">🧩 Мини-ойындар</button><button data-page="tests">📝 Білім шайқасы</button><button data-page="mistakes">🔎 Қателерім</button><button data-page="progress">🏆 Жетістіктерім</button></div><div class="side-foot">5-сынып • 2026</div></aside>
+<main class="main"><div class="top"><span class="badge">🚀 5-сынып • Информатика</span><span class="player">👤 <b id="playerName">Қатысушы</b><button class="change-name" onclick="changeName()">ауыстыру</button></span><div class="top-right"><span class="coins">🪙 <b id="coins">0</b></span><input class="search" id="search" placeholder="🔍 Тақырыпты іздеу..."></div></div>
+<section id="home" class="section active"><div class="hero"><div><div>🌟 Бүгінгі миссия сені күтуде!</div><h1>ИнфоQuest әлеміне<br>қош келдің!</h1><p>Тақырыптарды зертте, мини-ойындарда ұпай жина, білім шайқасында өз рекордыңды жаңарт!</p><button class="primary" onclick="showPage('practice')">Ойынға кіру →</button></div><div class="emoji">🤖</div></div>
+<div class="grid"><div class="card stat">⭐<span class="muted">Жалпы XP</span><b id="score">0</b><span class="muted">тәжірибе ұпайы</span></div><div class="card stat">🎮<span class="muted">Деңгей</span><b id="level">1</b><span class="muted" id="levelName">Зерттеуші</span></div><div class="card stat">🔥<span class="muted">Серия</span><b id="streak">0</b><span class="muted">дұрыс жауап</span></div><div class="card stat">🏆<span class="muted">Жетістік</span><b id="badgeCount">0</b><span class="muted">ашылды</span></div></div>
+<div class="card mission"><div><span class="pill">КҮНДЕЛІКТІ МИССИЯ</span><h2>🎯 Бір мини-ойынды аяқта</h2><p class="muted" id="missionText">Білімді тексеріп, 20 XP жина!</p><div class="progress"><i id="missionBar" style="width:0%"></i></div></div><div class="flag">🏁</div><button class="secondary" onclick="showPage('tests')">Бастау</button></div>
+<div class="grid"><div class="card"><h3>💡 Ақылды кеңес</h3><p class="muted">Қате — жеңіліс емес. Ол келесі деңгейге апаратын жасырын кеңес!</p></div><div class="card"><h3>🪙 Монета жина</h3><p class="muted">Әр дұрыс жауап үшін монета ал. Монеталар сенің табандылығыңды көрсетеді.</p></div><div class="card"><h3>🤖 Көмекші</h3><p class="muted">Түсініксіз сөзге бассаң, қысқа әрі қарапайым түсіндірме шығады.</p></div><div class="card"><h3>🌈 Мақсат</h3><p class="muted">Кемінде 100 XP жинап, «Білімпаз» деңгейіне көтеріл!</p></div></div></section>
+<section id="theory" class="section"><h1>📚 Теория әлемі</h1><p class="muted">Карточканы басып, тақырыпты зертте. Әр зерттелген тақырып +5 XP береді.</p><div class="cards" id="topicCards"></div></section>
+<section id="practice" class="section"><h1>🧩 Мини-ойындар</h1><p class="muted">Ойын ойнап, біліміңді байқат. Әр ойыннан кейін XP мен монета аласың!</p><div class="cards"><div class="card lesson"><div class="icon">⌨️</div><h3>Перне тап!</h3><p class="muted">Сипаттамаға сәйкес пернені таңда.</p><button class="secondary" onclick="keyboardGame()">Ойнау</button></div><div class="card lesson"><div class="icon">🗂️</div><h3>Файл ма, бума ма?</h3><p class="muted">Нысандарды дұрыс санатқа бөл.</p><button class="secondary" onclick="fileGame()">Ойнау</button></div><div class="card lesson"><div class="icon">🔐</div><h3>Қауіпсіздік сақшысы</h3><p class="muted">Интернеттегі дұрыс әрекеттерді таңда.</p><button class="secondary" onclick="securityGame()">Ойнау</button></div></div><div class="cards"><div class="card lesson"><div class="icon">🧠</div><h3>Жұмбақ информатика</h3><p class="muted">Жасырылған информатика сөзін тап.</p><button class="secondary" onclick="riddleGame()">Ойнау</button></div><div class="card lesson"><div class="icon">🔢</div><h3>Екілік код</h3><p class="muted">0 мен 1 арқылы берілген санды тап.</p><button class="secondary" onclick="binaryGame()">Ойнау</button></div><div class="card lesson"><div class="icon">🧩</div><h3>Алгоритм құрастыр</h3><p class="muted">Әрекеттерді дұрыс ретке қой.</p><button class="secondary" onclick="algorithmGame()">Ойнау</button></div><div class="card lesson"><div class="icon">⚡</div><h3>Жылдам жауап</h3><p class="muted">10 секундта дұрыс жауаптарды жина.</p><button class="secondary" onclick="speedGame()">Ойнау</button></div><div class="card lesson"><div class="icon">🎯</div><h3>Артық нысанды тап</h3><p class="muted">Қайсысы берілген топқа жатпайды?</p><button class="secondary" onclick="oddOneGame()">Ойнау</button></div><div class="card lesson"><div class="icon">💡</div><h3>Инфо-викторина</h3><p class="muted">Қысқа сұрақтарға қатарынан жауап бер.</p><button class="secondary" onclick="quickGame()">Ойнау</button></div></div><div id="gameBox" class="gamebox"></div></section>
+<section id="tests" class="section"><h1>📝 Білім шайқасы</h1><p class="muted">5 сұраққа жауап бер. Жылдамдық емес, мұқияттық маңызды!</p><div class="card quiz" id="quiz"></div></section>
+<section id="mistakes" class="section"><h1>🔎 Қателерім</h1><div class="card"><p>Қате жауаптарыңды қайталау арқылы келесі жолы көбірек ұпай жинайсың.</p><div id="mistakeList" class="muted">Әзірге қате жауап жоқ. Білім шайқасына қатысып көр!</div></div></section>
+<section id="progress" class="section"><h1>🏆 Жетістіктерім</h1><div class="grid"><div class="card stat">Жалпы XP<b id="score2">0</b></div><div class="card stat">Монета<b id="coins2">0</b></div><div class="card stat">Тест саны<b id="testCount">0</b></div><div class="card stat">Дұрыс жауап<b id="correctCount">0</b></div></div><div class="card"><h2>Келесі деңгейге прогресс</h2><div class="progress"><i id="progressBar" style="width:0%"></i></div><p class="muted" id="xpHint">0 / 100 XP</p></div><h2>Белгілер сөресі</h2><div class="cards" id="badges"></div><div class="card leaderboard"><h2>🏁 Жарыс көшбасшылары</h2><p class="muted">Осы құрылғыда қатысқан оқушылардың нәтижелері.</p><div id="leaderboard"></div></div></section>
+<div class="footer">© 2026 ИнфоQuest • Білімді ойынмен меңгер!</div></main></div><div id="toast"></div>
+<script>
+const topics=[['🖥️','Компьютер құрылғылары','Компьютер ақпаратты қабылдайды, сақтайды, өңдейді және шығарады. Монитор — ақпаратты экранда көрсетеді, пернетақта — енгізеді.'],['💾','Файл және бума','Файл — ақпарат сақталатын нысан. Бума файлдар мен басқа бумаларды реттеп сақтауға көмектеседі.'],['🔤','Ақпарат түрлері','Мәтіндік, сандық, графикалық, дыбыстық және бейнелік ақпарат түрлері болады.'],['⌨️','Пернетақта','Enter — растау немесе жаңа жол, Space — бос орын, Backspace — сол жақ таңбаны өшіру.'],['🖱️','Тінтуір','Тінтуір нысандарды таңдау, ашу, жылжыту және мәзірмен жұмыс істеуге мүмкіндік береді.'],['🌐','Интернет','Интернет — ақпарат алмасуға арналған ғаламдық желі. Сенімді дереккөздерді таңда.'],['🔐','Киберқауіпсіздік','Құпиясөзді ешкімге берме, күмәнді сілтемені ашпа, жеке мәліметті жариялама.'],['📄','Мәтіндік құжат','Мәтіндік редакторда мәтін енгізуге, түзетуге, пішімдеуге және сақтауға болады.'],['🧠','Алгоритм','Алгоритм — мақсатқа жету үшін орындалатын реттелген әрекеттер тізбегі.'],['🧩','Логика','Логика шартты түсініп, дұрыс шешімге кезең-кезеңімен келуге үйретеді.'],['📊','Ақпаратты ұсыну','Ақпаратты кесте, сызба, диаграмма немесе суретпен түсінікті көрсетуге болады.'],['🤖','Жасанды интеллект','Жасанды интеллект ақпаратты талдауға және тапсырмаларды орындауға көмектесетін технология.']];
+let data={score:0,coins:0,testCount:0,correct:0,streak:0,mistakes:[],studied:[],name:''};
+let leaderboard=[];try{leaderboard=JSON.parse(localStorage.infoQuestLeaders||'[]')}catch(e){}try{data={...data,...JSON.parse(localStorage.infoQuest||'{}')}}catch(e){}
+const questions=[['Компьютердің ақпаратты экранда көрсететін құрылғысы қайсы?',['Пернетақта','Монитор','Тінтуір','Принтер'],1],['Enter пернесінің қызметі қандай?',['Таңбаны өшіру','Бос орын қою','Жаңа жолға өту немесе растау','Дыбысты өшіру'],2],['Сурет арқылы берілетін ақпарат түрі?',['Графикалық','Дыбыстық','Мәтіндік','Сандық'],0],['Файлдарды реттеп сақтауға не көмектеседі?',['Бума','Монитор','Тінтуір','Пернетақта'],0],['Қауіпсіз құпиясөзге қай әрекет дұрыс?',['Досыңа айту','Бір құпиясөзді бәріне беру','Құпиясөзді құпия сақтау','Ашық жазып қою'],2]];let qi=0,answered=false;
+function save(){localStorage.infoQuest=JSON.stringify(data);updateUI();renderLeaderboard()}
+function startCompetition(){let name=document.getElementById('nameInput').value.trim();if(name.length<2){document.getElementById('nameError').textContent='Аты-жөніңді толық енгізу керек.';return}data.name=name;localStorage.infoQuest=JSON.stringify(data);document.getElementById('nameModal').classList.add('hidden');document.getElementById('playerName').textContent=name;toast('Қош келдің, '+name+'! Жарыс басталды 🏁');updateUI()}
+function changeName(){document.getElementById('nameInput').value=data.name||'';document.getElementById('nameError').textContent='';document.getElementById('nameModal').classList.remove('hidden');document.getElementById('nameInput').focus()}
+function renderLeaderboard(){let box=document.getElementById('leaderboard');if(!box)return;let rows=[...leaderboard];if(data.name){let i=rows.findIndex(x=>x.name===data.name);if(i<0)rows.push({name:data.name,score:data.score,correct:data.correct});else{rows[i].score=Math.max(rows[i].score,data.score);rows[i].correct=Math.max(rows[i].correct,data.correct)}}rows.sort((a,b)=>b.score-a.score);box.innerHTML=rows.length?'<table class="table"><tr><th>Орын</th><th>Қатысушы</th><th>XP</th><th>Дұрыс жауап</th></tr>'+rows.slice(0,10).map((x,i)=>`<tr class="${x.name===data.name?'me-row':''}"><td class="rank">${i<3?['🥇','🥈','🥉'][i]:i+1}</td><td>${x.name}${x.name===data.name?' <b>(сен)</b>':''}</td><td><b>${x.score}</b></td><td>${x.correct}</td></tr>`).join('')+'</table>':'<p class="muted">Әзірге нәтижелер жоқ.</p>'}
+function recordResult(){if(!data.name)return;let i=leaderboard.findIndex(x=>x.name===data.name);let row={name:data.name,score:data.score,correct:data.correct};if(i<0)leaderboard.push(row);else leaderboard[i]=row;localStorage.infoQuestLeaders=JSON.stringify(leaderboard);renderLeaderboard()}
+function updateUI(){let lvl=Math.floor(data.score/100)+1;let names=['Зерттеуші','Ізденімпаз','Білімпаз','Киберқаһарман','ИнфоШебер'];document.querySelectorAll('#score,#score2').forEach(x=>x.textContent=data.score);document.getElementById('coins').textContent=data.coins;document.getElementById('coins2').textContent=data.coins;document.getElementById('level').textContent=lvl;document.getElementById('levelName').textContent=names[Math.min(lvl-1,4)];document.getElementById('streak').textContent=data.streak;document.getElementById('testCount').textContent=data.testCount;document.getElementById('correctCount').textContent=data.correct;document.getElementById('badgeCount').textContent=badgeList().filter(b=>b.ok).length;let pct=data.score%100;document.getElementById('progressBar').style.width=pct+'%';document.getElementById('xpHint').textContent=(data.score%100)+' / 100 XP (келесі деңгейге)';document.getElementById('missionBar').style.width=Math.min(100,data.score%20*5)+'%';document.getElementById('mistakeList').innerHTML=data.mistakes.length?data.mistakes.slice(-10).reverse().map(m=>`<p>❌ <b>${m.q}</b><br><span class="muted">Сенің жауабың: ${m.your} • Дұрысы: ${m.right}</span></p>`).join(''):'Әзірге қате жауап жоқ.';renderBadges()}
+function gain(x,c=1,msg='Жарайсың!'){data.score+=x;data.coins+=c;toast(`✨ +${x} XP  🪙 +${c} — ${msg}`);save()}
+function toast(msg){let t=document.getElementById('toast');t.innerHTML=`<div class="toast">${msg}</div>`;setTimeout(()=>t.innerHTML='',2200)}
+function showPage(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===id));if(id==='tests')renderQuiz();if(id==='progress')updateUI();window.scrollTo(0,0)}
+document.querySelectorAll('.nav button').forEach(b=>b.onclick=()=>showPage(b.dataset.page));
+document.getElementById('topicCards').innerHTML=topics.map((t,i)=>`<div class="card lesson topic" data-topic="${t[1].toLowerCase()}" onclick="study(${i})"><div class="icon">${t[0]}</div><h3>${i+1}. ${t[1]}</h3><p class="muted">${t[2]}</p><span class="pill">${data.studied.includes(i)?'✅ Зерттелді':'+5 XP'}</span></div>`).join('');
+function study(i){if(!data.studied.includes(i)){data.studied.push(i);gain(5,1,'Тақырып зерттелді!');document.getElementById('topicCards').children[i].querySelector('.pill').textContent='✅ Зерттелді'}else toast('Бұл тақырып бұрын зерттелген ✅')}
+document.getElementById('search').oninput=e=>{let q=e.target.value.toLowerCase();document.querySelectorAll('.topic').forEach(x=>x.style.display=x.dataset.topic.includes(q)?'':'none')};
+function renderQuiz(){let q=questions[qi];answered=false;document.getElementById('quiz').innerHTML=`<div class="quiz-top"><span>Сұрақ ${qi+1} / ${questions.length}</span><span class="streak">🔥 Серия: ${data.streak}</span></div><h2>${q[0]}</h2>${q[1].map((x,i)=>`<button class="option" onclick="answer(${i})">${String.fromCharCode(65+i)}. ${x}</button>`).join('')}<div id="quizMsg"></div>`}
+function answer(i){if(answered)return;answered=true;let q=questions[qi],buttons=document.querySelectorAll('.option');buttons.forEach(b=>b.disabled=true);buttons[i].classList.add(i===q[2]?'correct':'wrong');if(i===q[2]){data.correct++;data.streak++;data.score+=10+Math.min(data.streak*2,10);data.coins+=2;document.getElementById('quizMsg').innerHTML='<div class="result" style="background:#e6faf5">✅ Дұрыс! Комбо жалғасуда! +XP</div>'}else{data.streak=0;data.mistakes.push({q:q[0],right:q[1][q[2]],your:q[1][i]});document.getElementById('quizMsg').innerHTML=`<div class="result" style="background:#fff0f2">❌ Дұрыс жауап: ${q[1][q[2]]}<br><small>Келесі сұрақта мұқият бол!</small></div>`}save();setTimeout(()=>{qi++;if(qi<questions.length)renderQuiz();else finishQuiz()},1000)}
+function finishQuiz(){data.testCount++;recordResult();save();document.getElementById('quiz').innerHTML=`<div class="result" style="background:#eef0ff">🎉 Білім шайқасы аяқталды!<br>Бұл тесттегі нәтиже: ${data.correct}/${questions.length} жалпы дұрыс жауап.<br><br><button class="primary" onclick="qi=0;renderQuiz()">Қайта ойнау</button></div>`}
+function keyboardGame(){document.getElementById('gameBox').innerHTML=`<div class="card"><h2>⌨️ Қай перне керек?</h2><p>«Жаңа жолға өту немесе әрекетті растау» үшін пернені таңда:</p><div class="game-grid">${['Enter','Space','Backspace','Shift'].map(x=>`<button class="game-item" onclick="keyAnswer('${x}',this)">${x}</button>`).join('')}</div></div>`}
+function keyAnswer(x,el){document.querySelectorAll('.game-item').forEach(b=>b.disabled=true);if(x==='Enter'){el.classList.add('selected');gain(15,3,'Пернені таптың!')}else{el.classList.add('bad');toast('Тағы бір рет ойлан: жаңа жол үшін Enter керек 🙂')}}
+function fileGame(){document.getElementById('gameBox').innerHTML=`<div class="card"><h2>🗂️ Файл ма, бума ма?</h2><p>«Суреттер» деген нысан файлдарды ішіне жинайды. Ол не?</p><div class="game-grid"><button class="game-item" onclick="fileAnswer(false,this)">📄 Файл</button><button class="game-item" onclick="fileAnswer(true,this)">📁 Бума</button></div></div>`}
+function fileAnswer(ok,el){document.querySelectorAll('.game-item').forEach(b=>b.disabled=true);if(ok){el.classList.add('selected');gain(15,3,'Файл мен буманы ажыраттың!')}else{el.classList.add('bad');toast('Файлдарды жинайтын орын — бума 📁')}}
+function securityGame(){document.getElementById('gameBox').innerHTML=`<div class="card"><h2>🔐 Қауіпсіздік сақшысы</h2><p>Қай әрекет қауіпсіз?</p><div class="game-grid">${['Құпиясөзді досқа айту','Күмәнді сілтемені ашу','Құпиясөзді құпия сақтау','Жеке мекенжайды жариялау'].map((x,i)=>`<button class="game-item" onclick="securityAnswer(${i},this)">${x}</button>`).join('')}</div></div>`}
+function securityAnswer(i,el){document.querySelectorAll('.game-item').forEach(b=>b.disabled=true);if(i===2){el.classList.add('selected');gain(15,3,'Сен қауіпсіздік сақшысысың!')}else{el.classList.add('bad');toast('Жеке мәліметті қорғау керек 🔐')}}
+
+function riddleGame(){
+ const qs=[
+  ['Мен мәтін енгізуге көмектесемін. Батырмаларым көп. Мен кіммін?',['Пернетақта','Монитор','Принтер','Динамик'],0],
+  ['Ақпаратты экранда көрсететін құрылғы?',['Тінтуір','Монитор','Пернетақта','Сканер'],1],
+  ['Файлдарды жинақтап сақтайтын нысан?',['Бума','Перне','Экран','Курсор'],0]
+ ];
+ const q=qs[Math.floor(Math.random()*qs.length)];
+ document.getElementById('gameBox').innerHTML=`<div class="card"><h2>🧠 Жұмбақ информатика</h2><p>${q[0]}</p><div class="challenge-options">${q[1].map((x,i)=>`<button class="game-item" onclick="riddleAnswer(${i},${q[2]},this)">${x}</button>`).join('')}</div></div>`;
+}
+function riddleAnswer(i,right,el){
+ document.querySelectorAll('.game-item').forEach(b=>b.disabled=true);
+ if(i===right){el.classList.add('selected');gain(20,4,'Жұмбақты шештің! 🧠')}
+ else{el.classList.add('bad');toast('Дұрыс жауапты қайта ойлан 🙂')}
+}
+function binaryGame(){
+ const nums=[['101','5'],['110','6'],['111','7'],['100','4']];
+ const q=nums[Math.floor(Math.random()*nums.length)];
+ document.getElementById('gameBox').innerHTML=`<div class="card"><h2>🔢 Екілік код</h2><p>Екілік жүйеде <b>${q[0]}</b> саны ондық жүйеде нешеге тең?</p><div class="choice-grid">${['4','5','6','7'].map(x=>`<button class="game-item" onclick="binaryAnswer('${x}','${q[1]}',this)">${x}</button>`).join('')}</div></div>`;
+}
+function binaryAnswer(x,right,el){
+ document.querySelectorAll('.game-item').forEach(b=>b.disabled=true);
+ if(x===right){el.classList.add('selected');gain(20,4,'Кодты дұрыс шештің! 🔢')}
+ else{el.classList.add('bad');toast('0 мен 1-ді мұқият есепте!')}
+}
+function algorithmGame(){
+ const items=['1️⃣ Компьютерді қосу','2️⃣ Жұмыс істеу','3️⃣ Компьютерді өшіру'];
+ document.getElementById('gameBox').innerHTML=`<div class="card"><h2>🧩 Алгоритм құрастыр</h2><p>Әрекеттерді дұрыс ретпен таңда:</p><div id="algoBtns">${items.map((x,i)=>`<button class="game-item" onclick="algoPick(${i},this)">${x}</button>`).join('')}</div><div id="algoMsg"></div></div>`;
+ window.algoOrder=[];
+}
+function algoPick(i,el){
+ if(window.algoOrder.includes(i))return;
+ window.algoOrder.push(i);el.classList.add('selected');el.disabled=true;
+ if(window.algoOrder.length===3){
+  if(window.algoOrder.join(',')==='0,1,2'){
+   document.getElementById('algoMsg').innerHTML='<div class="result" style="background:#e6faf5">✅ Дұрыс алгоритм!</div>';gain(25,5,'Алгоритм шебері! 🧩');
+  }else{
+   document.getElementById('algoMsg').innerHTML='<div class="result" style="background:#fff0f2">❌ Рет қате. Алгоритмді қайта құрып көр!</div>';
+   toast('Алдымен компьютерді қосамыз 😉');
+  }
+ }
+}
+function speedGame(){
+ const qs=[
+  ['Компьютер ақпаратты экранға шығаратын құрылғы?','Монитор',['Монитор','Пернетақта','Бума','Файл']],
+  ['Бос орын қою пернесі?','Space',['Enter','Space','Shift','Esc']],
+  ['Файлдарды реттеуге көмектеседі?','Бума',['Бума','Монитор','Дыбыс','Курсор']]
+ ];
+ let q=qs[Math.floor(Math.random()*qs.length)];
+ let left=10, score=0, done=false;
+ document.getElementById('gameBox').innerHTML=`<div class="card"><h2>⚡ Жылдам жауап</h2><div class="timer" id="speedTimer">10</div><p><b>${q[0]}</b></p><div class="challenge-options">${q[2].map(x=>`<button class="game-item" onclick="speedAnswer('${x}','${q[1]}',this)">${x}</button>`).join('')}</div><div id="speedMsg"></div></div>`;
+ window.speedDone=false;
+ window.speedInterval=setInterval(()=>{left--;let t=document.getElementById('speedTimer');if(t)t.textContent=left;if(left<=0){clearInterval(window.speedInterval);if(!window.speedDone){window.speedDone=true;document.getElementById('speedMsg').innerHTML='<div class="result" style="background:#fff0f2">⏰ Уақыт аяқталды!</div>'}}},1000);
+}
+function speedAnswer(x,right,el){
+ if(window.speedDone)return;
+ window.speedDone=true;clearInterval(window.speedInterval);
+ document.querySelectorAll('.game-item').forEach(b=>b.disabled=true);
+ if(x===right){el.classList.add('selected');gain(25,5,'Жылдам әрі дұрыс! ⚡')}
+ else{el.classList.add('bad');document.getElementById('speedMsg').innerHTML='<div class="result" style="background:#fff0f2">❌ Дұрыс жауап: '+right+'</div>'}
+}
+function oddOneGame(){
+ const sets=[
+  ['Компьютер құрылғыларын тап','Монитор','Пернетақта','Тінтуір','Алма','Алма'],
+  ['Ақпарат түрлерін тап','Мәтін','Сан','Сурет','Пернетақта','Пернетақта'],
+  ['Интернет қауіпсіздігіне қатысты әрекетті тап','Құпиясөзді қорғау','Күмәнді сілтемені ашпау','Жеке мәліметті жариялау','Құпиясөзді құпия сақтау','Жеке мәліметті жариялау']
+ ];
+ const s=sets[Math.floor(Math.random()*sets.length)];
+ document.getElementById('gameBox').innerHTML=`<div class="card"><h2>🎯 Артық нысанды тап</h2><p>${s[0]}</p><div class="choice-grid">${s.slice(1,5).map((x,i)=>`<button class="game-item" onclick="oddAnswer('${x}','${s[5]}',this)">${x}</button>`).join('')}</div></div>`;
+}
+function oddAnswer(x,right,el){
+ document.querySelectorAll('.game-item').forEach(b=>b.disabled=true);
+ if(x===right){el.classList.add('selected');gain(20,4,'Артық нысанды таптың! 🎯')}
+ else{el.classList.add('bad');toast('Тағы бір қарап шық 🙂')}
+}
+function quickGame(){
+ const qs=[
+  ['Алгоритм дегеніміз не?','Реттелген әрекеттер тізбегі'],
+  ['Enter пернесі не үшін керек?','Жаңа жолға өту немесе растау'],
+  ['Графикалық ақпаратқа не жатады?','Сурет'],
+  ['Құпиясөзді кімге айту керек?','Ешкімге айтпау керек']
+ ];
+ const q=qs[Math.floor(Math.random()*qs.length)];
+ document.getElementById('gameBox').innerHTML=`<div class="card"><h2>💡 Инфо-викторина</h2><p><b>${q[0]}</b></p><div class="choice-grid">${[q[1],'Басқа жауап','Кездейсоқ ақпарат','Бұлт'].sort(()=>Math.random()-.5).map(x=>`<button class="game-item" onclick="quickAnswer('${x.replace(/'/g,"\\'")}','${q[1].replace(/'/g,"\\'")}',this)">${x}</button>`).join('')}</div></div>`;
+}
+function quickAnswer(x,right,el){
+ document.querySelectorAll('.game-item').forEach(b=>b.disabled=true);
+ if(x===right){el.classList.add('selected');gain(20,4,'Тамаша жауап! 💡')}
+ else{el.classList.add('bad');toast('Қайта ойланып көр!')}
+}
+
+function badgeList(){return[{icon:'🌱',name:'Алғашқы қадам',desc:'Бірінші XP жина',ok:data.score>=5},{icon:'🧠',name:'Зерек оқушы',desc:'50 XP жина',ok:data.score>=50},{icon:'🔥',name:'Комбо шебері',desc:'3 дұрыс жауап қатарынан',ok:data.streak>=3},{icon:'📚',name:'Зерттеуші',desc:'3 тақырыпты оқы',ok:data.studied.length>=3},{icon:'🏆',name:'Білімпаз',desc:'100 XP жина',ok:data.score>=100},{icon:'🛡️',name:'Қауіпсіздік сақшысы',desc:'Мини-ойынды аяқта',ok:data.score>=15},{icon:'⚡',name:'Жылдам ойлаушы',desc:'Жылдам жауап ойынын жең',ok:data.score>=25},{icon:'🧩',name:'Алгоритм шебері',desc:'Алгоритм ойынын дұрыс орында',ok:data.score>=25}]}
+function renderBadges(){document.getElementById('badges').innerHTML=badgeList().map(b=>`<div class="card badge-card ${b.ok?'':'locked'}"><div class="badge-icon">${b.icon}</div><div><h3>${b.name}</h3><p class="muted small">${b.desc}</p><span class="pill">${b.ok?'АШЫЛДЫ':'ҚҰЛЫПТАУЛЫ'}</span></div></div>`).join('')}
+updateUI();renderLeaderboard();if(data.name){document.getElementById('nameModal').classList.add('hidden');document.getElementById('playerName').textContent=data.name}else{setTimeout(()=>document.getElementById('nameInput').focus(),100)}
+document.getElementById('nameInput').addEventListener('keydown',e=>{if(e.key==='Enter')startCompetition()});
+</script></body></html>
